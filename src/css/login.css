@@ -12,17 +12,28 @@ body {
   
   /* Header Styles */
   header {
-    background-color: #333;
+    background: linear-gradient(to right, #942e46, #503935);
     color: #fff;
     padding: 20px 0;
     text-align: center;
   }
   
+  
   header h1 {
     margin: 0;
     font-size: 24px;
+    color: #ffffff;
+  transition: color 0.5s ease;
   }
-  
+  header h1:hover {
+    color: #000000; /* Change to a different color on hover */
+  }
+
+  nav a:hover {
+  /* Change background color on hover */
+    color: #080808; /* Change text color on hover */
+    text-decoration:underline; /* Add underline effect on hover */
+  }
   nav ul {
     list-style: none;
     padding: 0;
@@ -122,6 +133,30 @@ body {
   .product-info button:hover {
     background-color: #0056b3;
   }
+  .product-card:hover  {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  /* CSS for LED light animation */
+/* CSS for LED light animation */
+@keyframes glow {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); /* Low opacity when off */
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); /* Medium opacity */
+    }
+    100% {
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); /* High opacity when on */
+    }
+  }
+  
+  .product-card {
+    position: relative; /* Ensure the child elements are positioned relative to the product card */
+    border: 2px solid transparent; /* Initial border style */
+    border-radius: 10px; /* Adjust border radius to match your design */
+    animation: glow 2s infinite alternate; /* Apply the glow animation */
+  }
   
   /* Promotions and Deals Styles */
   .promotions {
@@ -143,7 +178,50 @@ body {
     width: 100%;
     border-radius: 5px;
   }
+  .promotion-banner {
+    position: relative; /* Ensures the child elements are positioned relative to the banner */
+  }
+  @keyframes grow {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  .promotion-banner:hover img {
+    animation: grow 0.9s ease-in-out infinite alternate;/* Apply the bounce animation on hover */
+  }
+  @keyframes hurryUp {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-5px);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
   
+  .hurry-up-text {
+    animation: hurryUp 1s ease-in-out infinite;
+  }
+  
+  
+  
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px); /* Adjust the distance you want the banner to bounce */
+    }
+  }
   /* Product Categories Styles */
   .product-categories {
     padding: 50px 0;
@@ -175,7 +253,35 @@ body {
   .category-card p {
     color: #666;
   }
+ /* CSS for LED light animation */
+@keyframes blink {
+    0% {
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); /* Low opacity when off */
+    }
+    50% {
+      box-shadow: 0 0 10px rgba(0, 255, 0, 1); /* Full opacity when on */
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); /* Low opacity when off */
+    }
+  }
   
+  .category-card {
+    position: relative; /* Ensure the child elements are positioned relative to the category card */
+  }
+  
+  .category-card::before {
+    content: ''; /* Create a pseudo-element to represent the LED light border */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent; /* Initial border style */
+    border-radius: 10px; /* Adjust border radius to match your image */
+    animation: blink 1s infinite; /* Apply the blink animation */
+  }
+ 
   /* Footer Styles */
   footer {
     background-color: #333;

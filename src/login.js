@@ -1,11 +1,17 @@
 import React from 'react';
 import "../src/css/login.css"
-import img from  "../src/pics/Screenshot 2024-02-29 185534.png"
-import img2 from "./pics/lap.png"
 import HeroCarousel from './carousel';
+
+
 
 const Homepage = () => {
     const images = require.context('../src/pics', false, /\.(png|jpe?g|svg)$/);
+   
+    const products = [
+        { id: 1, name: 'OPPO F25 5G', price: 'Rs 19,999', imgs:images('./Screenshot 2024-02-29 185534.png') },
+        { id: 2, name: 'Lenovo LOQ Intel Core i5 12th Gen', price: 'Rs 41,999',imgs:images('./lap.png') },]
+        
+    
     const categories = [
         { id: 1, name: 'Electronics', image: images('./elec.png') },
         { id: 2, name: 'Home & Kitchen', image: images('./home.png') },
@@ -44,20 +50,14 @@ const Homepage = () => {
       <section className="featured-products">
         <h2>Featured Products</h2>
         <div className="product-grid">
-          {/* Display featured products */}
-          {/* Example product card */}
-          <div className="product-card">
-            <img src={img} alt="Product" style={{ width: '700px', height: '220px' }} />
-            <h3>OPPO F25 5G</h3>
-            <p>Rs 19,999</p>
-            <button>Add to Cart</button>
-          </div>
-          <div className="product-card">
-            <img src={img2} alt="Product" style={{ width: '700px', height: '220px' }} />
-            <h3>Lenovo LOQ Intel Core i5 12th Gen</h3>
-            <p>Rs 41,999</p>
-            <button>Add to Cart</button>
-          </div>
+          {products.map(product => (
+                        <div key={product.id} className="product-card">
+                            <img src={product.imgs} alt="Product" style={{ width: '730px', height: '230px' }} />
+                            <h3>{product.name}</h3>
+                            <p>{product.price}</p>
+                            <button >Add to Cart</button>
+                        </div>
+                    ))}
           {/* Repeat the product card for each featured product */}
         </div>
       </section>
@@ -70,7 +70,7 @@ const Homepage = () => {
           {promotions.map(promotion => (
             <div key={promotion.id} className="promotion-banner">
               <img src={promotion.imag} alt="Promotion" />
-              <p>{promotion.description}</p>
+              <p className="hurry-up-text">{promotion.description}</p>
             </div>
           ))}
         </div>
