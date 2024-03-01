@@ -29,7 +29,7 @@ const Homepage = () => {
           <ul>
             <li><a href="/">Home</a></li>
             <li><Link to="/products">Products</Link></li>
-            <li><a href="/cart">Cart</a></li>
+            <li><Link to="/cart">Cart</Link></li> 
         
           </ul>
         </nav>
