@@ -1,79 +1,99 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Header Styles */
-  header {
-    background: linear-gradient(to right, #942e46, #503935);
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  
-  header h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #ffffff;
-  transition: color 0.5s ease;
-  }
-  header h1:hover {
-    color: #000000; /* Change to a different color on hover */
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #dfdedd; /* Soft beige background color */
+  color: #504a4b; /* Dark gray text color */
+}
+header input[type="text"] {
+  padding: 8px 12px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 250px; /* Adjust width as needed */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  color: #333; /* Dark gray text color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
 
-  nav a:hover {
-  /* Change background color on hover */
-    color: #080808; /* Change text color on hover */
-    text-decoration:underline; /* Add underline effect on hover */
-  }
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Hero Section Styles */
-  .hero {
-    background-color: #f0f0f0;
-    padding: 50px 0;
-    text-align: center;
-  }
-  
-  .hero h2 {
-    margin: 0;
-    color: #333;
-  }
-  
-  .hero p {
-    color: #666;
-  }
-  
-  .hero button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-  }
+header input[type="text"]::placeholder {
+  color: #999; /* Light gray placeholder text color */
+}
+
+header input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.5); /* Gold shadow when focused */
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(to right, #a18739, #d4af37); /* Gold gradient background */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header h1:hover {
+  color: #000; /* Darken text color on hover */
+}
+
+nav a:hover {
+  color: #080808;
+  text-decoration: underline;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero Section Styles */
+.hero {
+  background-color: #f0f0f0;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  margin: 0;
+  color: #333;
+}
+
+.hero p {
+  color: #666;
+}
+
+.hero button {
+  background-color: #d4af37; /* Gold button color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
   
   /* Featured Products Styles */
   .featured-products {
@@ -122,17 +142,17 @@ body {
   }
   
   .product-info button {
-    background-color: #007bff;
+    background-color: #d4af37;
     color: #fff;
     border: none;
     padding: 8px 16px;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .product-info button:hover {
-    background-color: #0056b3;
-  }
+}
+
+.product-info button:hover {
+    background-color: #b38e1e; /* Darken button color on hover */
+}
   .product-card:hover  {
     transform: scale(1.05);
     transition: transform 0.3s ease;
@@ -333,42 +353,58 @@ body {
     height: auto; /* Maintain aspect ratio */
   }
   footer {
-    background-color: #e1e3e5;
-    padding: 20px 0;
+    background-color: #504a4b; /* Dark gray footer background */
+    color: #fff;
+    padding: 50px 0;
     text-align: center;
-    color: #007bff;
-  }
-  
-  footer div {
-    margin-bottom: 20px;
-  }
-  
-  footer h4 {
-    font-size: 18px;
-    color: #333;
-  }
-  
-  footer p {
+}
+
+footer h4 {
     margin: 0;
-  }
-  
-  /* Footer links styles */
-  footer ul {
+}
+
+footer div {
+    margin-bottom: 20px;
+}
+
+footer h4 {
+    font-size: 18px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  footer ul li {
+}
+
+footer ul li {
     display: inline-block;
     margin-right: 10px;
-  }
-  
-  footer a {
-    color: #007bff;
+}
+
+footer a {
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  footer a:hover {
-    color: #0056b3;
-  }
+}
+
+footer a:hover {
+    color: #d4af37; /* Gold link color on hover */
+}
+
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+}

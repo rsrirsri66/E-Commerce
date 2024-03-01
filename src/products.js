@@ -1,8 +1,8 @@
 import React from 'react';
-const CartPage = () => { 
+const Pageproduct = () => { 
   return (
     <div>
-      <header>
+        <header>
         <nav>
           <ul>
             <li><a href="/">Home</a></li>
@@ -16,10 +16,10 @@ const CartPage = () => {
           <input type="text" placeholder="Search products..." />
         </div>
       </header>
-      <h2>Cart</h2>
+      <h2>Products</h2>
       
     </div>
   );
 };
 
-export default CartPage;
+export default Pageproduct;
