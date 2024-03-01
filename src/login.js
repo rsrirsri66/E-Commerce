@@ -1,7 +1,7 @@
 import React from 'react';
 import "../src/css/login.css"
 import HeroCarousel from './carousel';
-
+import { Link } from 'react-router-dom';
 
 
 const Homepage = () => {
@@ -28,7 +28,7 @@ const Homepage = () => {
         <nav>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/products">Products</a></li>
+            <li><Link to="/products">Products</Link></li>
             <li><a href="/cart">Cart</a></li>
         
           </ul>
