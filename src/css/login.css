@@ -2,28 +2,28 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #dfdedd; /* Soft beige background color */
-  color: #504a4b; /* Dark gray text color */
+  background-color: #dfdedd; 
+  color: #504a4b; 
 }
 header input[type="text"] {
-  padding: 8px 12px; /* Adjust padding as needed */
+  padding: 8px 12px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   margin-top: 10px;
-  width: 250px; /* Adjust width as needed */
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-  color: #333; /* Dark gray text color */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 250px; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  color: #333; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header input[type="text"]::placeholder {
-  color: #999; /* Light gray placeholder text color */
+  color: #999; 
 }
 
 header input[type="text"]:focus {
   outline: none;
-  box-shadow: 0 0 6px rgba(212, 175, 55, 0.5); /* Gold shadow when focused */
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.5); 
 }
 .container {
   max-width: 1200px;
@@ -33,7 +33,7 @@ header input[type="text"]:focus {
 
 /* Header Styles */
 header {
-  background: linear-gradient(to right, #a18739, #d4af37); /* Gold gradient background */
+  background: linear-gradient(to right, #a18739, #d4af37); 
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -45,7 +45,7 @@ header h1 {
 }
 
 header h1:hover {
-  color: #000; /* Darken text color on hover */
+  color: #000; 
 }
 
 nav a:hover {
@@ -85,7 +85,7 @@ nav ul li a {
 }
 
 .hero button {
-  background-color: #d4af37; /* Gold button color */
+  background-color: #d4af37; 
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -151,31 +151,30 @@ nav ul li a {
 }
 
 .product-info button:hover {
-    background-color: #b38e1e; /* Darken button color on hover */
+    background-color: #b38e1e; 
 }
   .product-card:hover  {
     transform: scale(1.05);
     transition: transform 0.3s ease;
   }
   /* CSS for LED light animation */
-/* CSS for LED light animation */
 @keyframes glow {
     0% {
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); /* Low opacity when off */
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); 
     }
     50% {
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); /* Medium opacity */
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); 
     }
     100% {
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); /* High opacity when on */
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); 
     }
   }
   
   .product-card {
-    position: relative; /* Ensure the child elements are positioned relative to the product card */
-    border: 2px solid transparent; /* Initial border style */
-    border-radius: 10px; /* Adjust border radius to match your design */
-    animation: glow 2s infinite alternate; /* Apply the glow animation */
+    position: relative; 
+    border: 2px solid transparent; 
+    border-radius: 10px; 
+    animation: glow 2s infinite alternate; 
   }
   
   /* Promotions and Deals Styles */
@@ -199,7 +198,7 @@ nav ul li a {
     border-radius: 5px;
   }
   .promotion-banner {
-    position: relative; /* Ensures the child elements are positioned relative to the banner */
+    position: relative; 
   }
   @keyframes grow {
     0% {
@@ -210,7 +209,7 @@ nav ul li a {
     }
   }
   .promotion-banner:hover img {
-    animation: grow 0.9s ease-in-out infinite alternate;/* Apply the bounce animation on hover */
+    animation: grow 0.9s ease-in-out infinite alternate;
   }
   @keyframes hurryUp {
     0% {
@@ -239,7 +238,7 @@ nav ul li a {
       transform: translateY(0);
     }
     100% {
-      transform: translateY(-10px); /* Adjust the distance you want the banner to bounce */
+      transform: translateY(-10px); 
     }
   }
   /* Product Categories Styles */
@@ -276,30 +275,30 @@ nav ul li a {
  /* CSS for LED light animation */
 @keyframes blink {
     0% {
-      box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); /* Low opacity when off */
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); 
     }
     50% {
-      box-shadow: 0 0 10px rgba(0, 255, 0, 1); /* Full opacity when on */
+      box-shadow: 0 0 10px rgba(0, 255, 0, 1); 
     }
     100% {
-      box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); /* Low opacity when off */
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); 
     }
   }
   
   .category-card {
-    position: relative; /* Ensure the child elements are positioned relative to the category card */
+    position: relative; 
   }
   
   .category-card::before {
-    content: ''; /* Create a pseudo-element to represent the LED light border */
+    content: ''; 
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid transparent; /* Initial border style */
-    border-radius: 10px; /* Adjust border radius to match your image */
-    animation: blink 1s infinite; /* Apply the blink animation */
+    border: 2px solid transparent; 
+    border-radius: 10px; 
+    animation: blink 1s infinite; 
   }
  
   /* Footer Styles */
@@ -336,24 +335,24 @@ nav ul li a {
   
   /* Slider Styles */
   .Slider {
-    width: 100%; /* Ensure the slider takes up the full width of its container */
+    width: 100%; 
   }
   
-  /* Slide Styles */
+  
   .Slider .slide {
-    width: 100%; /* Ensure each slide takes up the full width of the slider */
+    width: 100%; 
   }
   
   .Slider .slide img {
-    width: 100%; /* Make the images within each slide fill the entire width */
-    height: auto; /* Ensure images maintain their aspect ratio */
+    width: 100%; 
+    height: auto; 
   }
   .promotion-banner img {
-    width: 100%; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
   }
   footer {
-    background-color: #504a4b; /* Dark gray footer background */
+    background-color: #504a4b; 
     color: #fff;
     padding: 50px 0;
     text-align: center;
@@ -391,11 +390,11 @@ footer a {
 }
 
 footer a:hover {
-    color: #d4af37; /* Gold link color on hover */
+    color: #d4af37; 
 }
 
 @media (max-width: 768px) {
-    /* Adjust styles for smaller screens */
+    
     header {
         padding: 20px;
     }
